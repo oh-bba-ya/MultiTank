@@ -86,6 +86,11 @@ public class ProjectileLauncher : NetworkBehaviour
 
         Physics2D.IgnoreCollision(_playerCollider, projectileInstance.GetComponent<Collider2D>());
 
+        if(projectileInstance.TryGetComponent<DealDamageOnContact>(out DealDamageOnContact dealDamage))
+        {
+            dealDamage.SetOwner(OwnerClientId);
+        }
+
         // Rigidbody가 존재한다면
         if (projectileInstance.TryGetComponent<Rigidbody2D>(out Rigidbody2D rb))
         {
