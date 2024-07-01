@@ -18,7 +18,6 @@ public class DealDamageOnContact : MonoBehaviour
         // 콜라이더가 연결되어 있는 리지드바디가 null이면.. 리턴
         if (other.attachedRigidbody == null)
         {
-            Debug.Log("NUll");
             return;
         }
 
@@ -27,7 +26,6 @@ public class DealDamageOnContact : MonoBehaviour
             // 내가 쏜 총알에 내가 충돌하면..
             if(_ownerClientId == netObj.OwnerClientId)
             {
-                Debug.Log("나와 충돌");
                 return;
             }
         }
@@ -36,12 +34,7 @@ public class DealDamageOnContact : MonoBehaviour
 
         if (other.attachedRigidbody.TryGetComponent<Health>(out Health healthComp))
         {
-            Debug.Log("데미지");
             healthComp.TakeDamage(damage);
-        }
-        else
-        {
-            Debug.Log("Health 콤프가 없는건가?");
         }
     }
 }

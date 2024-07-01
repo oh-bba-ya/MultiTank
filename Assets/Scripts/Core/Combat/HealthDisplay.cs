@@ -14,6 +14,7 @@ public class HealthDisplay : NetworkBehaviour
     {
         if(!IsClient) return;
 
+        // NetworkVariable 데이터 변경시 호출되는 이벤트
         _health.CurrentHealth.OnValueChanged += HandleHealthChanged;
         HandleHealthChanged(0, _health.CurrentHealth.Value);
     }
