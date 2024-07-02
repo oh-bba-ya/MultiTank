@@ -8,6 +8,7 @@ public class ProjectileLauncher : NetworkBehaviour
 {
     [Header("References")]
     [SerializeField] private InputReader _inputReader;
+    [SerializeField] private CoinWallet _coinWallet;
     [SerializeField] private Transform _projectileSpawnPoint;
     [SerializeField] private GameObject _serverProjectilePrefab;
     [SerializeField] private GameObject _clientProjectilePrefab;
@@ -18,9 +19,10 @@ public class ProjectileLauncher : NetworkBehaviour
     [SerializeField] private float _projectileSpeed;
     [SerializeField] private float _fireRate;
     [SerializeField] private float _muzzleFlashDuration;
+    [SerializeField] private int _costToFire;    // 발사에 필요한 코인 점수
 
     private bool _shouldFire;
-    private float _previousFireTime;
+    private float _timer;
     private float _muzzleFlashTimer;
 
 
@@ -41,6 +43,7 @@ public class ProjectileLauncher : NetworkBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if(_muzzleFlashTimer > 0f)
         {
             _muzzleFlashTimer -= Time.deltaTime;
@@ -52,12 +55,21 @@ public class ProjectileLauncher : NetworkBehaviour
 
         if (!IsOwner) { return ; }
 
+        if (_timer > 0)
+        {
+            _timer -= Time.deltaTime;
+        }
+
         if(!_shouldFire) { return; }
 
-        if(Time.time < ( 1 / _fireRate) + _previousFireTime)
+        if(_timer > 0)
         {
             return;
         }
+
+        // 플레이어가 소지한 코인 점수가 발사에 필요한 코인 점수 미만이라면..
+        if (_coinWallet.TotalCoins.Value < _costToFire) { return; }
+
 
         PrimaryFireServerRpc(_projectileSpawnPoint.position, _projectileSpawnPoint.up);
 
@@ -65,7 +77,7 @@ public class ProjectileLauncher : NetworkBehaviour
 
 
         // 발사 시간 저장... (시간이 지날수록 부동소수점이 쌓여 오차가 존재한다.)
-        _previousFireTime = Time.time;
+        _timer = 1 / _fireRate;
     }
 
     void HandlePrimaryFire(bool shouldFire)
@@ -77,6 +89,11 @@ public class ProjectileLauncher : NetworkBehaviour
     [ServerRpc]
     void PrimaryFireServerRpc(Vector3 spawnPos, Vector3 direction)
     {
+        // 플레이어가 소지한 코인 점수가 발사에 필요한 코인 점수 미만이라면..
+        if (_coinWallet.TotalCoins.Value < _costToFire) {  return ; }
+
+        _coinWallet.SpendCoins(_costToFire);
+
         // 프로젝틸 생성..
         GameObject projectileInstance = Instantiate(_serverProjectilePrefab, spawnPos, Quaternion.identity);
 
