@@ -4,6 +4,7 @@ using UnityEngine;
 using Unity.Netcode;
 using Cinemachine;
 using Unity.Collections;
+using System;
 
 public class TankPlayer : NetworkBehaviour
 {
@@ -12,8 +13,14 @@ public class TankPlayer : NetworkBehaviour
 
     [Header("Settings")]
     [SerializeField] private int ownerPriority = 15;
+    [field : SerializeField] public Health Health { get; private set; }
 
     public NetworkVariable<FixedString32Bytes> PlayerName = new NetworkVariable<FixedString32Bytes>();
+
+    public static event Action<TankPlayer> OnPlayerSpawned;
+
+    public static event Action<TankPlayer> OnPlayerDespawned;
+
     public override void OnNetworkSpawn()
     {
         if(IsServer)
@@ -21,11 +28,21 @@ public class TankPlayer : NetworkBehaviour
             UserData userData = HostSingleton.Instance.GameManager.NetworkServer.GetUserDataByClientId(OwnerClientId);
 
             PlayerName.Value = userData.userName;
+
+            OnPlayerSpawned?.Invoke(this);
         }
 
         if (IsOwner)
         {
             _virtualCamera.Priority = ownerPriority;
+        }
+    }
+
+    public override void OnNetworkDespawn()
+    {
+        if (IsServer)
+        {
+            OnPlayerDespawned?.Invoke(this);
         }
     }
 }

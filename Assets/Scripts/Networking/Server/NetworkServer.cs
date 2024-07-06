@@ -28,6 +28,9 @@ public class NetworkServer : IDisposable
         authIdToUserData[userData.userAuthId] = userData;
 
         response.Approved = true;
+        response.Position = SpawnPoint.GetRandomSpawnPos();  // 플레이어 스폰 위치
+        response.Rotation = Quaternion.identity;     // 플레이어 스폰 방향
+
         response.CreatePlayerObject = true;   // 플레이어 객체 생성, false로 되어 있으면 플레이어 Prefab을 생성하지 않는다.
     }
 
