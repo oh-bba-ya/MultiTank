@@ -40,4 +40,9 @@ public class HostSingleton : MonoBehaviour
 
         await GameManager.StartHostAsync();
     }
+
+    private void OnDestroy()
+    {
+        GameManager?.Dispose();
+    }
 }
