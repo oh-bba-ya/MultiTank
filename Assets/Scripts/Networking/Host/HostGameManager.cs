@@ -21,7 +21,7 @@ public class HostGameManager : IDisposable
     private string _joinCode;  // 다른 플레이어가 참여할 수 있는 조인 코드를 저장하는 변수
     private string _lobbyId;
 
-    private NetworkServer _networkServer;
+    public NetworkServer NetworkServer { get; private set; }
 
     private const int MaxConnections = 20;   // 릴레이 서버 최대 연결개수 20이 최대 무료이다..
     private const string GameSceneName = "Game";
@@ -93,7 +93,7 @@ public class HostGameManager : IDisposable
         }
 
         // 네트워크 서버를 새 네트워크 서버와 동일하게 만들고 전달
-        _networkServer = new NetworkServer(NetworkManager.Singleton);
+        NetworkServer = new NetworkServer(NetworkManager.Singleton);
 
         UserData userData = new UserData()
         {
@@ -152,6 +152,6 @@ public class HostGameManager : IDisposable
 
         }
 
-        _networkServer?.Dispose();
+        NetworkServer?.Dispose();
     }
 }

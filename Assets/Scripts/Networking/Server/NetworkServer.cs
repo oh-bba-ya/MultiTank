@@ -36,6 +36,22 @@ public class NetworkServer : IDisposable
         _networkManager.OnClientDisconnectCallback += OnClientDisconnect;
     }
 
+
+    public UserData GetUserDataByClientId(ulong clientId)
+    {
+        if(_clientIdToAuth.TryGetValue(clientId,out string authid))
+        {
+            if(authIdToUserData.TryGetValue(authid,out UserData userData))
+            {
+                return userData;
+            }
+
+            return null;
+        }
+
+        return null;
+    }
+
     /// <summary>
     /// 연결이 끊기면 삭제..
     /// </summary>
