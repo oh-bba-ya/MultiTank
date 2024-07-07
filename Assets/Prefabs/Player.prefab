@@ -883,6 +883,7 @@ MonoBehaviour:
   _virtualCamera: {fileID: 5461026334482028741}
   ownerPriority: 15
   <Health>k__BackingField: {fileID: 6184361127758599166}
+  <CoinWallet>k__BackingField: {fileID: 1642086629217293406}
   PlayerName:
     m_InternalValue:
       utf8LengthInBytes: 0

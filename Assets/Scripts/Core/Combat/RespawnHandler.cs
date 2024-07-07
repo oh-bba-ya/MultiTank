@@ -6,13 +6,14 @@ using UnityEngine;
 
 public class RespawnHandler : NetworkBehaviour
 {
-    [SerializeField] private NetworkObject playerPrefab;
+    [SerializeField] private TankPlayer playerPrefab;
+    [SerializeField] private float keptCoinPercentage;
 
     public override void OnNetworkSpawn()
     {
         if(!IsServer) return;
 
-        TankPlayer[] players = FindObjectsOfType<TankPlayer>();
+        TankPlayer[] players = FindObjectsByType<TankPlayer>(FindObjectsSortMode.None);
 
         foreach(TankPlayer player in players)
         {
@@ -44,20 +45,24 @@ public class RespawnHandler : NetworkBehaviour
 
     private void HandelPlayerDie(TankPlayer player)
     {
+        int keptCoinds = (int)(player.CoinWallet.TotalCoins.Value * (keptCoinPercentage / 100));
+
         Destroy(player.gameObject);
 
         // 삭제 후 다음 프레임에서 스폰..
-        StartCoroutine(RespawnPlayer(player.OwnerClientId));
+        StartCoroutine(RespawnPlayer(player.OwnerClientId, keptCoinds));
     }
 
-    IEnumerator RespawnPlayer(ulong ownerClientId)
+    IEnumerator RespawnPlayer(ulong ownerClientId, int keptCoins)
     {
         yield return null;
 
-        NetworkObject playerInstance = Instantiate(playerPrefab, SpawnPoint.GetRandomSpawnPos(), Quaternion.identity);
+        TankPlayer playerInstance = Instantiate(playerPrefab, SpawnPoint.GetRandomSpawnPos(), Quaternion.identity);
 
         // 새로 생성된 오브젝트의 소유권을 기존 클라이언트로 다시 설정..
-        playerInstance.SpawnAsPlayerObject(ownerClientId);
+        playerInstance.NetworkObject.SpawnAsPlayerObject(ownerClientId);
+
+        playerInstance.CoinWallet.TotalCoins.Value += keptCoins;
     }
 
 }
