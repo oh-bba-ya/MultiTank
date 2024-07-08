@@ -86,6 +86,11 @@ public class ClientGameManager : IDisposable
 
     }
 
+    public void Disconnect()
+    {
+        _networkClient.Disconect();
+    }
+
     public void Dispose()
     {
         // IDispose
@@ -95,4 +100,6 @@ public class ClientGameManager : IDisposable
         // Dispose : 리소스를 정리하는 작업을 수행
         _networkClient?.Dispose();
     }
+
+
 }

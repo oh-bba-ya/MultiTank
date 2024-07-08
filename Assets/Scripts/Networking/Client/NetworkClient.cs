@@ -30,7 +30,13 @@ public class NetworkClient : IDisposable
             return;
         }
 
-        if(SceneManager.GetActiveScene().name != MenuSceneName)
+        Disconect();
+
+    }
+
+    public void Disconect()
+    {
+        if (SceneManager.GetActiveScene().name != MenuSceneName)
         {
             SceneManager.LoadScene(MenuSceneName);
         }
@@ -39,7 +45,6 @@ public class NetworkClient : IDisposable
         {
             _networkManager.Shutdown();
         }
-
     }
 
     // 클라이언트 연결 종료시 콜백에 추가했던 함수들을 삭제하는것
@@ -50,4 +55,5 @@ public class NetworkClient : IDisposable
             _networkManager.OnClientDisconnectCallback -= OnClientDisconnect;
         }
     }
+
 }
