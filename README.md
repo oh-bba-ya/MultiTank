@@ -32,16 +32,7 @@ Mouse|LeftClick
 
 ## 구현 목록
 ### 1. Lobby System  
-##### (1) Player Name & Create
-
-
-
-
-##### (2) Join Code  
-
-
-
-##### (3) Lobby List  
+이름 입력|로비 UI
 
 #### 2. Game Feature
 (1) PlayerMovement (new Input System)  
