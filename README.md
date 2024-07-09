@@ -37,8 +37,11 @@ Mouse|LeftClick
 
 
 
-(3) Join Code  
-(4) Lobby List  
+##### (2) Join Code  
+![JoinCode](https://github.com/oh-bba-ya/MultiTank/assets/49023743/319c2ef1-771d-4d67-981e-f7d827f4ecd2)
+
+
+##### (3) Lobby List  
 
 #### 2. Game Feature
 (1) PlayerMovement (new Input System)  
