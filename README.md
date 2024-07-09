@@ -30,9 +30,9 @@ Key|Fire|
 Mouse|LeftClick
 
 
-## 프로젝트 기능 구현 목록
-#### 1. Lobby System  
-(1) Create  
+## 구현 목록
+### 1. Lobby System  
+##### (1) Create  
 (2) Join Code  
 (3) Lobby List  
 
