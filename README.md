@@ -33,6 +33,9 @@ Mouse|LeftClick
 ## 구현 목록
 ### 1. Lobby System  
 이름 입력|로비 UI
+---|:---:
+
+
 
 #### 2. Game Feature
 (1) PlayerMovement (new Input System)  
