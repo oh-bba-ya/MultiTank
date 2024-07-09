@@ -34,7 +34,8 @@ Mouse|LeftClick
 ### 1. Lobby System  
 이름 입력|로비 UI
 :---:|:---:
-![01](https://github.com/oh-bba-ya/MultiTank/assets/49023743/d41f232a-b033-48f0-ae69-bc5cafbbd0bb)|로비 UI
+![01](https://github.com/oh-bba-ya/MultiTank/assets/49023743/d41f232a-b033-48f0-ae69-bc5cafbbd0bb)|![02](https://github.com/oh-bba-ya/MultiTank/assets/49023743/9f091bf3-99fb-4b22-adc4-26af31b53b67)
+
 
 
 #### 2. Game Feature
