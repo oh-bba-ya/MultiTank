@@ -26,6 +26,7 @@ Unity Netcode / Relay / LobbySystem 학습용 프로젝트
 (9) Minimap  
 
 
+#### 3. 게임 플레이 
+- 캐릭터 이동 방법
 
-#### 게임 이용 방법
-1. 
+
