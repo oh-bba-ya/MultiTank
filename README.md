@@ -33,6 +33,7 @@ Mouse|LeftClick
 ## 구현 목록
 ### 1. Lobby System  
 ##### (1) Player Name & Create
+![PlayerName_Create](https://github.com/oh-bba-ya/MultiTank/assets/49023743/6a70846c-390f-4e49-9e5d-e4aff8f42318)
 
 
 
