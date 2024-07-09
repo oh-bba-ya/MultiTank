@@ -42,4 +42,5 @@ Key|상(위)|좌(왼쪽)|우(오른쪽)|하(아래)
 
 Key|Fire|
 ---|:---:
+Mouse|LeftClick
 
