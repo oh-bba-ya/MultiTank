@@ -62,6 +62,14 @@ LeaderBoard|Description
 
 
 
+#### (3) Healing Zone
+|Healing Zone|Description
+|:---:|:---:|
+![09](https://github.com/oh-bba-ya/MultiTank/assets/49023743/60a21c14-c08a-42c5-b280-3ac011f77c87) | 코인을 소비하여 본인의 체력을 회복할 수 있습니다.
+![11](https://github.com/oh-bba-ya/MultiTank/assets/49023743/5655d3e2-7c47-47ad-a9bd-ce16717f3079) | Healing Zone의 경우 저장된 체력이 존재하며 저장된 체력을 모두 소비하면 일정시간동안 Healing Zone의 체력을 회복시킵니다.
+
+
+
 
 
 
