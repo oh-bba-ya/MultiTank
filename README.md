@@ -32,19 +32,23 @@ Mouse|LeftClick
 
 ## 구현 목록
 ### 1. Lobby System  
+
+Host|Create 방 생성  
+:---:|:---:
+
+Clinet|Host가 생성한 로비 코드로 참여
+:---:|:---:
+
+Lobby| 생성된 로비 리스트
+:---:|:---:
+
+
 이름 입력|로비 UI
 :---:|:---:
 ![01](https://github.com/oh-bba-ya/MultiTank/assets/49023743/d41f232a-b033-48f0-ae69-bc5cafbbd0bb)|![02](https://github.com/oh-bba-ya/MultiTank/assets/49023743/9f091bf3-99fb-4b22-adc4-26af31b53b67)
 
 
-Host|Clinet  
-:---:|:---:
 
-Clinet|Lobby 
-:---:|:---:
-
-Clinet|Lobby
-:---:|:---:
 
 
 #### 2. Game Feature
