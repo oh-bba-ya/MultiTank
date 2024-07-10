@@ -30,7 +30,6 @@ Key|Fire|
 Mouse|LeftClick
 
 
-## 구현 목록
 ### 1. Lobby System  
 
 Host|Create 방 생성  
@@ -47,19 +46,15 @@ Lobby| 생성된 로비 리스트
 
 
 
+### 2. Game
+(1) Coin & Fire
+Coin|Fire
+---|:---:
+![06](https://github.com/oh-bba-ya/MultiTank/assets/49023743/a57f5545-41c4-45f0-aa25-8ac5af7839e1)| 코인을 획득하여 포탄을 발사 할 수 있습니다. 코인은 랜덤으로 생성되며 
 
 
-#### 2. Game Feature
-##### (1) PlayerMovement & Aiming  
+(2) HUD
 
-##### (2) Projectile & Fireing  
-
-
-(5) HUD 
-(6) Damage  
-(7) Pickup - Coin
-(8) Healing Zone  
-(9) Minimap  
 
 
 
