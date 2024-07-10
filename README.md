@@ -50,7 +50,8 @@ Lobby| 생성된 로비 리스트
 
 
 #### 2. Game Feature
-(1) PlayerMovement (new Input System)  
+##### (1) PlayerMovement
+
 (2) Player Aiming  
 (3) Projectile  
 (4) Fireing  
