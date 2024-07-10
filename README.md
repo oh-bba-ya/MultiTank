@@ -48,9 +48,9 @@ Lobby| 생성된 로비 리스트
 
 ### 2. Game
 (1) Coin & Fire
-|Coin&Fire|
-|---|
-![06](https://github.com/oh-bba-ya/MultiTank/assets/49023743/a57f5545-41c4-45f0-aa25-8ac5af7839e1)| 코인을 획득하여 포탄을 발사 할 수 있습니다. 코인은 랜덤으로 생성되며 |
+|Coin&Fire|Description
+|:---:|:---:|
+![06](https://github.com/oh-bba-ya/MultiTank/assets/49023743/a57f5545-41c4-45f0-aa25-8ac5af7839e1)| 코인을 획득하여 포탄을 발사 할 수 있습니다. 코인은 랜덤으로 생성되며 플레이어 사망시 소유하고 있던 코인 일부를 드랍합니다.
 
 
 (2) HUD
