@@ -10,7 +10,7 @@
 기간|2024.06 ~ 2024.07
 개발 엔진 및 언어 | Unity 2022 & C#
 인원 | 1명
-Stack | 2D/ NetCode / Lobby System / Relay / UGUI / new Input System
+기술 | 2D/ NetCode / Lobby System / Relay / UGUI / new Input System
 
 
 ##  게임 플레이 
