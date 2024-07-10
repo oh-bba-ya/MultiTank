@@ -36,9 +36,8 @@ Mouse|LeftClick
 Host|Create 방 생성  
 :---:|:---:
 Clinet|Host가 생성한 로비 코드로 참여
-:---:|:---:
 Lobby| 생성된 로비 리스트
-:---:|:---:
+
 
 
 이름 입력|로비 UI
