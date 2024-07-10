@@ -70,7 +70,10 @@ LeaderBoard|Description
 
 
 
-
+#### (4) Minimap
+|Minimap|Description
+|:---:|:---:|
+![12](https://github.com/oh-bba-ya/MultiTank/assets/49023743/e4c1a754-af76-4130-8200-1679eab046bd)|플레이어들은 주황색원형으로 표시되며 HealingZone의 경우 초록색 박스로 표시됩니다.
 
 
 
