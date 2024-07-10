@@ -8,7 +8,7 @@
 목적 |Unity Netcode / Relay / LobbySystem 학습용 프로젝트
 :---:|:---:
 기간|2024.06 ~ 2024.07
-개발 엔진 및 언어 | Unity 2022 & C#
+엔진 및 언어 | Unity 2022 & C#
 인원 | 1명
 기술 | 2D/ NetCode / Lobby System / Relay / UGUI / new Input System
 
