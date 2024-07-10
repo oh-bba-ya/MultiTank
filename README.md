@@ -1,8 +1,4 @@
 # MultiTank
- 
-# 프로젝트 영상
-
-
 
 # 개요
 목적 |Unity Netcode / Relay / LobbySystem 학습용 프로젝트
