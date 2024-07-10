@@ -50,11 +50,11 @@ Lobby| 생성된 로비 리스트
 
 
 #### 2. Game Feature
-##### (1) PlayerMovement
+##### (1) PlayerMovement & Aiming  
 
-(2) Player Aiming  
-(3) Projectile  
-(4) Fireing  
+##### (2) Projectile & Fireing  
+
+
 (5) HUD 
 (6) Damage  
 (7) Pickup - Coin
