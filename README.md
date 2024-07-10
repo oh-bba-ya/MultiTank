@@ -54,10 +54,12 @@ Lobby| 생성된 로비 리스트
 
 
 #### (2) HUD
-|*Health Bar & Player Name*|*Description*
+|Health Bar & Player Name|Description
 |:---:|:---:|
 ![07](https://github.com/oh-bba-ya/MultiTank/assets/49023743/806e6f4c-6c2d-4d18-9b0d-8e19c49d4637) | 플레이어는 체력바를 통해 본인의 체력을 확인할 수 있으며 처음 설정한 이름이 Health Bar위에 표시됩니다.
 LeaderBoard|Description
+![08](https://github.com/oh-bba-ya/MultiTank/assets/49023743/2139a8dd-2f2a-482d-b55b-935d77b5de07)| 코인 점수를 기준으로 내림차순 정렬입니다. 코인 점수가 높은 플레이어일수록 상위에 표시됩니다.
+
 
 
 
