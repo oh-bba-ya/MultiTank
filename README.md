@@ -40,7 +40,7 @@ Lobby| 생성된 로비 리스트
 
 
 
-이름 입력|로비 UI|로비리스트
+이름 입력|로비 UI|로비리스트(Lobby) - Refresh(새로고침)
 :---:|:---:|:---:
 ![01](https://github.com/oh-bba-ya/MultiTank/assets/49023743/d41f232a-b033-48f0-ae69-bc5cafbbd0bb)|![02](https://github.com/oh-bba-ya/MultiTank/assets/49023743/9f091bf3-99fb-4b22-adc4-26af31b53b67)|![04](https://github.com/oh-bba-ya/MultiTank/assets/49023743/f515b305-6921-4373-90eb-3734168a23e2)
 
